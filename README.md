@@ -8,7 +8,9 @@ Source: https://time-series.net/data_sets
 The second column in file SIM_2.XLS contains the 100 values of the simulated ARMA(1, 1) process used in Section 7. This series is entitled Y2. Use this series to perform the following tasks (Note: Due to differences in data handling and rounding, your answers need only approximate those presented here.):
 
 a. Plot the sequence against time. Does the series appear to be stationary? Plot the ACF.
+
 b. Verify the results in Table 2.3.
+
 c. Estimate the process using a pure MA(2) model. You should obtain 
 
 yt = −1.15𝜀t−1   +   0.522𝜀t−2 + et        ; usable observations: 100
