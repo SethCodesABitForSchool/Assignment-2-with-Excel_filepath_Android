@@ -77,6 +77,7 @@ The data in Y2 is already a time series (so not creating a ts object)
 
 # Plot the time Series (Method 1)
 plot.ts(data_subset, main= "Time Series of Y2", ylab= "Y2TS", col= "red")
+![c7dba089-cc95-4534-bf5e-654effbf460d](https://github.com/SethCodesABitForSchool/Assignment-2-with-Excel_filepath_Android/assets/147195203/a95e0a3d-6c3e-4659-822d-c8245208ba3d)
 
 
 # Install and Load required library
@@ -102,6 +103,7 @@ C:\Users\kumbalas-INS\AppData\Local\Temp\RtmpwjROPj\downloaded_packages
 # Plot the time series (Method 2)
 plot(data_subset$Y2, type = "l", main = "Time Series Plot - Y2")
 
+![b6a9773a-5a03-40ff-b6f7-73152d80e9ee](https://github.com/SethCodesABitForSchool/Assignment-2-with-Excel_filepath_Android/assets/147195203/e9810326-3a7c-4b58-b4ec-d2e08d1f361d)
 
 # Identifying Stationarity using the summary stats
 
