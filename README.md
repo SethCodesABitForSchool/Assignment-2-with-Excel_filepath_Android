@@ -65,3 +65,49 @@ data <- read_excel(file_path)
 # Read the dataset with the filepath 
 
 file_path <- file.path("C:", "Users", "kumbalas-INS", "Downloads", "Sim_2.38134535.xls")
+
+# Extract Y2
+data_subset <- subset(data, select = c("Y2"))
+
+# Remove data/values to declutter the REnvironment
+rm(data)
+rm(file_path)
+
+The data in Y2 is already a time series (so not creating a ts object)
+
+# Plot the time Series (Method 1)
+plot.ts(data_subset, main= "Time Series of Y2", ylab= "Y2TS", col= "red")
+
+
+# Install and Load required library
+install.packages("TSA")
+library(TSA)
+
+Output: 
+package ‘xts’ successfully unpacked and MD5 sums checked
+package ‘TTR’ successfully unpacked and MD5 sums checked
+package ‘curl’ successfully unpacked and MD5 sums checked
+package ‘quadprog’ successfully unpacked and MD5 sums checked
+package ‘zoo’ successfully unpacked and MD5 sums checked
+package ‘quantmod’ successfully unpacked and MD5 sums checked
+package ‘jsonlite’ successfully unpacked and MD5 sums checked
+package ‘leaps’ successfully unpacked and MD5 sums checked
+package ‘locfit’ successfully unpacked and MD5 sums checked
+package ‘tseries’ successfully unpacked and MD5 sums checked
+package ‘TSA’ successfully unpacked and MD5 sums checked
+
+The downloaded binary packages are in
+C:\Users\kumbalas-INS\AppData\Local\Temp\RtmpwjROPj\downloaded_packages
+
+# Plot the time series (Method 2)
+plot(data_subset$Y2, type = "l", main = "Time Series Plot - Y2")
+
+# Identify the Stationarity  
+
+# ADF Test for stationarity
+adf_test <- adf.test(ts_data$Y2)
+print(adf_test)
+
+
+
+
