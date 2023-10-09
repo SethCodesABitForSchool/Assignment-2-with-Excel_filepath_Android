@@ -106,6 +106,78 @@ plot(data_subset$Y2, type = "l", main = "Time Series Plot - Y2")
 adf_test <- adf.test(ts_data$Y2)
 print(adf_test)
 
+# Convert data_subset$Y2 to a vector - Not sure for what
+y2_vector <- data_subset$Y2
+
+# Plot the time series
+plot(y2_vector, type = "l", main = "Time Series Plot - Y2")
+
+
+# Install and Load Tseries
+
+ADF.test is part of Tseries. 
+
+install.packages("tseries")
+
+library(tseries)
+
+
+# ADF Test for stationarity
+adf_test <- adf.test(y2_vector)
+
+
+print(adf_test)
+
+
+# Output of ADF - Test:
+  
+  
+Augmented Dickey-Fuller Test -Significance level 0.05 
+
+data:  y2_vector
+
+Dickey-Fuller = -8.0087, Lag order = 4, p-value = 0.01
+
+
+alternative hypothesis: stationary
+
+
+
+The output from the Augmented Dickey-Fuller (ADF) test provides information about whether a time series is stationary or not. 
+
+1. Dickey-Fuller: This is the test statistic value. In your output, it is -8.0087.
+
+
+
+2. Lag order: This is the number of lags used in the regression. In your output, it is 4.
+
+
+
+3. p-value: This is the p-value associated with the test statistic. In your output, it is 0.01.
+
+
+
+Alternative hypothesis: This indicates the alternative hypothesis of the test. In this case, it is "stationary," meaning we are testing whether the time series is stationary.
+
+
+
+
+1. Test Statistic (Dickey-Fuller): The more negative the test statistic, the stronger the evidence against the null hypothesis (the hypothesis of non-stationarity). In your case, the test statistic is -8.0087, which is quite strongly negative.
+
+
+
+2. p-value: The p-value is compared to a significance level (commonly 0.05). If the p-value is less than the significance level, you reject the null hypothesis. In your case, the p-value is 0.01, which is less than 0.05. Therefore, you reject the null hypothesis.
+
+
+
+3. Conclusion: Since the p-value is less than the significance level, you have evidence to reject the null hypothesis. The alternative hypothesis is accepted, suggesting that the time series (y2_vector) is stationary.
+
+
+
+
+
+
+
 
 
 
