@@ -102,7 +102,23 @@ C:\Users\kumbalas-INS\AppData\Local\Temp\RtmpwjROPj\downloaded_packages
 # Plot the time series (Method 2)
 plot(data_subset$Y2, type = "l", main = "Time Series Plot - Y2")
 
-# Identify the Stationarity  - ADF Test for stationarity
+
+# Identifying Stationarity using the summary stats
+
+The primary assumptions of Stationary Series are that it must have a constant mean and variance.
+
+1. Constant Mean: The mean of the time series should remain approximately constant over time. This means that, on average, the series does not trend upward or downward.
+
+2. Constant Variance: The variance (or standard deviation) of the time series should remain relatively constant over time. This implies that the spread or dispersion of the data points should not change systematically.
+
+3. Autocorrelation Structure: The autocorrelation structure, as indicated by the Autocorrelation Function (ACF), should decay relatively quickly to zero. Autocorrelation measures the relationship between a data point and its lagged values. In a stationary series, this relationship should diminish rapidly.
+
+These assumptions of stationarity are essential for many time series models to work effectively. If a series violates these assumptions, it may be necessary to transform or difference the data to induce stationarity. For example, differencing can be used to remove trends or seasonality.
+
+In summary, when assessing stationarity, you often check for constant mean, constant variance, and a stable autocorrelation structure. Statistical tests like the Augmented Dickey-Fuller (ADF) test and visual inspection, including plotting the time series and its ACF, can help you make these assessments.
+
+
+# Identifying the Stationarity using ADF Test for stationarity
 adf_test <- adf.test(ts_data$Y2)
 print(adf_test)
 
@@ -171,9 +187,6 @@ Alternative hypothesis: This indicates the alternative hypothesis of the test. I
 
 
 3. Conclusion: Since the p-value is less than the significance level, you have evidence to reject the null hypothesis. The alternative hypothesis is accepted, suggesting that the time series (y2_vector) is stationary.
-
-
-
 
 
 
