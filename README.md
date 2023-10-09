@@ -1,3 +1,9 @@
+# Assignment 2 - Topic: Stationary TS Models
+Solve the following problems from Enders (Ch. 2) - (end of chapter) Questions and Exercises: 9 and 10.
+
+Source: https://time-series.net/data_sets
+
+# Install Packaged for Excel
 install.packages("readxl")
 # Load the readxl library
 library(readxl)
