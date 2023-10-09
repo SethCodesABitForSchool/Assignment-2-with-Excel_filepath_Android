@@ -102,9 +102,7 @@ C:\Users\kumbalas-INS\AppData\Local\Temp\RtmpwjROPj\downloaded_packages
 # Plot the time series (Method 2)
 plot(data_subset$Y2, type = "l", main = "Time Series Plot - Y2")
 
-# Identify the Stationarity  
-
-# ADF Test for stationarity
+# Identify the Stationarity  - ADF Test for stationarity
 adf_test <- adf.test(ts_data$Y2)
 print(adf_test)
 
