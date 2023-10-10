@@ -191,6 +191,82 @@ Alternative hypothesis: This indicates the alternative hypothesis of the test. I
 3. Conclusion: Since the p-value is less than the significance level, you have evidence to reject the null hypothesis. The alternative hypothesis is accepted, suggesting that the time series (y2_vector) is stationary.
 
 
+# Plot the ACF
+
+acf(y2_vector, lag.max = 25, type = c("correlation"), plot = TRUE, col= "red", main= "Auto-Correlation Function of Y2")
+
+
+
+# Load required libraries
+install.packages("dplyr")
+library(dplyr)
+
+# Calculate mean and variance for the entire series
+mean_whole <- mean(y2_vector)
+var_whole <- var(y2_vector)
+
+# Calculate mean and variance for different time intervals (e.g., first half vs. second half)
+half_length <- length(y2_vector) %/% 2
+mean_first_half <- mean(y2_vector[1:half_length])
+var_first_half <- var(y2_vector[1:half_length])
+
+mean_second_half <- mean(y2_vector[(half_length + 1):length(y2_vector)])
+var_second_half <- var(y2_vector[(half_length + 1):length(y2_vector)])
+
+# Print the results
+cat("Mean (Whole):", mean_whole, "\n")
+cat("Variance (Whole):", var_whole, "\n")
+cat("Mean (First Half):", mean_first_half, "\n")
+cat("Variance (First Half):", var_first_half, "\n")
+cat("Mean (Second Half):", mean_second_half, "\n")
+cat("Variance (Second Half):", var_second_half, "\n")
+
+
+install.packages("gdata")
+library(gdata)
+
+ACF1 = acf(y2_vector, lag.max= 25, main= "AutoCorrelation Function", col= "red", lwd= 2)
+ACF1
+
+
+# Install the forecast package (uncomment the line below if you haven't installed it)
+install.packages("forecast")
+
+# Load the forecast package
+library(forecast)
+
+
+# Assuming y2_vector is your time series
+adf_test_result <- adf.test(y2_vector)
+print(adf_test_result)
+
+# Assume you have your time series data in y2_vector
+# Model 1
+model1 <- arima(y2_vector, order = c(1, 0, 1))
+summary(model1)
+
+# Model 2
+model2 <- arima(y2_vector, order = c(1, 0, 1), fixed = c(NA, 0))
+summary(model2)
+# Model 2 with ma1 fixed to 0
+model2 <- arima(y2_vector, order = c(1, 0, 1), fixed = c(NA, 0, NA))
+summary(model2)
+
+
+# Example of calculating error measures (MAE, RMSE, etc.)
+residuals <- resid(model1)
+error_measures <- accuracy(residuals)
+
+
+# Model 3
+model3 <- arima(y2_vector, order = c(1, 0, 1), fixed = c(NA, 0, NA))
+summary(model3)
+
+
+
+
+
+
 
 
 
