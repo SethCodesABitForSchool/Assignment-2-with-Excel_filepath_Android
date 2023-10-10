@@ -196,6 +196,7 @@ Alternative hypothesis: This indicates the alternative hypothesis of the test. I
 acf(y2_vector, lag.max = 25, type = c("correlation"), plot = TRUE, col= "red", main= "Auto-Correlation Function of Y2")
 
 
+![5db22484-84e7-49e0-9fea-d39b78163cc6](https://github.com/SethCodesABitForSchool/Assignment-2-with-Excel_filepath_Android/assets/147195203/b96f17a0-20db-4125-aedf-3ffd5c96a7a2)
 
 # Load required libraries
 install.packages("dplyr")
