@@ -264,6 +264,11 @@ model3 <- arima(y2_vector, order = c(1, 0, 1), fixed = c(NA, 0, NA))
 summary(model3)
 
 
+# Fit ARMA(1,1) model
+model_arma <- arima(data$Y2, order = c(1, 0, 1))
+
+# Print model summary
+summary(model_arma)
 
 
 
