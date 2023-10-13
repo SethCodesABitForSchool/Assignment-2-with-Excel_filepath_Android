@@ -11,6 +11,9 @@ a. Plot the sequence against time. Does the series appear to be stationary? Plot
 
 b. Verify the results in Table 2.3.
 
+![image](https://github.com/SethCodesABitForSchool/Assignment-2-with-Excel_filepath_Android/assets/147195203/859554c2-900d-4e3b-b708-2239a346c5d9)
+
+
 c. Estimate the process using a pure MA(2) model. You should obtain 
 
 yt = −1.15𝜀t−1   +   0.522𝜀t−2 + et        ; usable observations: 100
