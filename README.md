@@ -29,6 +29,9 @@ The third column in file SIM_2.XLS contains the 100 values of the simulated AR(2
 
 a. Plot the sequence against time. Verify the ACF and the PACF coefficients reported in Section 7. Compare the sample ACF and PACF to those of a theoretical AR(2) process.
 
+![image](https://github.com/SethCodesABitForSchool/Assignment-2-with-Excel_filepath_Android/assets/147195203/b038b564-4351-47e5-b3c4-a4f8045a390d)
+
+
 b. Estimate the series as an AR(1) process. You should find that the estimated AR(1) coefficient and the t-statistic are 
 yt = 0.467yt−1  +   et
       (5.24)
